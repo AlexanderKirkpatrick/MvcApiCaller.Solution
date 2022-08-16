@@ -1,0 +1,24 @@
+﻿@{
+  Layout = "_Layout";
+}
+
+<h1>Welcome to the MVC API Caller!</h1>
+
+<h1>All Articles:</h1>
+
+<ol>
+@foreach (Article article in Model)
+{
+    <ul>
+        <li>Section: @article.Section</li>
+        <li>Title: @article.Title</li>
+        <li>Abstract: @article.Abstract</li>
+        <li>Url: @article.Url</li>
+        <li>Byline: @article.Byline</li>
+    </ul>
+    <br>
+}
+</ol>
+
+<p>@Html.ActionLink("Create an account", "Index", "Account")</p>
+<p>@Html.ActionLink("Login", "Login", "Account")</p>
